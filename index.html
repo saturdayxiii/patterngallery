@@ -2,9 +2,6 @@
 <html>
   <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-        var org01 = "dragonfly.webp";
-    </script>
     <style>
 	body {
 		background-image: url(axolotl.webp);
@@ -78,61 +75,94 @@
 	<div class="hiders">
 		<button class="accordion">Organics</button>
 		<div class="panel">
-		<div class="thumbnail" onclick="changeBackground(org01)" style="background-image: url('${org01}')"></div>
-		<div class="thumbnail" onclick="changeBackground('transparent low poly Crystal rainbow Jungle Leaves (2986408026).webp')" style="background-image: url('transparent low poly Crystal rainbow Jungle Leaves (2986408026).webp')"></div>
-		<div class="thumbnail" onclick="changeBackground('572480881 (Upscaled).webp')" style="background-image: url('572480881 (Upscaled).webp')"></div>
-		<div class="thumbnail" onclick="changeBackground('3592217491 (Upscaled) (Upscaled)_1.webp')" style="background-image: url('3592217491 (Upscaled) (Upscaled)_1.webp')"></div>
-		<div class="thumbnail" onclick="changeBackground('eldritch columns.webp')" style="background-image: url('eldritch columns.webp')"></div>
-		<div class="thumbnail" onclick="changeBackground('Crystal Jungle Leaves (1155667477).webp')" style="background-image: url('Crystal Jungle Leaves (1155667477).webp')"></div>
-		<div class="thumbnail" onclick="changeBackground('transparent low poly Crystal rainbow Jungle Leaves (2854713576).webp')" style="background-image: url('transparent low poly Crystal rainbow Jungle Leaves (2854713576).webp')"></div>
-		<div class="thumbnail" onclick="changeBackground('scientific illustrations, fantasy fauna, ink.. (4108518997).webp')" style="background-image: url('scientific illustrations, fantasy fauna, ink.. (4108518997).webp')"></div>
+		<script>
+			const orgimages = [
+				'dragonfly.webp',
+				'transparent low poly Crystal rainbow Jungle Leaves (2986408026).webp',
+				'572480881 (Upscaled).webp',
+				'3592217491 (Upscaled) (Upscaled)_1.webp',
+				'eldritch columns.webp',
+				'Crystal Jungle Leaves (1155667477).webp',
+				'transparent low poly Crystal rainbow Jungle Leaves (2854713576).webp',
+				'scientific illustrations, fantasy fauna, ink.. (4108518997).webp'
+			];
+			orgimages.forEach((image) => {
+				document.write(`<div class="thumbnail" onclick="changeBackground('${image}')" style="background-image: url('${image}')"></div>`);
+			});
+		</script>
 		</div>
 			<button class="accordion">Structure</button>
 		<div class="panel">
-			<div class="thumbnail" onclick="changeBackground('sharp.webp')" style="background-image: url('sharp.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('shale.webp')" style="background-image: url('shale.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('icy.webp')" style="background-image: url('icy.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('icy_pix.webp')" style="background-image: url('icy_pix.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('1454179433 (Upscaled).webp')" style="background-image: url('1454179433 (Upscaled).webp')"></div>	
-			<div class="thumbnail" onclick="changeBackground('1524060738 (Upscaled).webp')" style="background-image: url('1524060738 (Upscaled).webp')"></div>		
-			<div class="thumbnail" onclick="changeBackground('neon ripples.webp')" style="background-image: url('neon ripples.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('313778383 (Upscaled).webp')" style="background-image: url('313778383 (Upscaled).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('transparent low poly Crystal rainbow Jungle Leaves (1679993035).webp')" style="background-image: url('transparent low poly Crystal rainbow Jungle Leaves (1679993035).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('transparent low poly Crystal rainbow Jungle Leaves (230812464).webp')" style="background-image: url('transparent low poly Crystal rainbow Jungle Leaves (230812464).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('aerial jungle pyramids (743559876).webp')" style="background-image: url('aerial jungle pyramids (743559876).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('aerial sythwave pyramids (1087111350).webp')" style="background-image: url('aerial sythwave pyramids (1087111350).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('crystal stairs depth blur (3363940484).webp')" style="background-image: url('crystal stairs depth blur (3363940484).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('crystal stairs depth blur (2702036273).webp')" style="background-image: url('crystal stairs depth blur (2702036273).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('scientific illustrations, fantasy fauna, ink.. (3136820274).webp')" style="background-image: url('scientific illustrations, fantasy fauna, ink.. (3136820274).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('scientific illustrations, fantasy fauna, ink.. (2948481068).webp')" style="background-image: url('scientific illustrations, fantasy fauna, ink.. (2948481068).webp')"></div>
-			</div>
+		<script>
+			const structimages = [
+				'sharp.webp',
+				'shale.webp',
+				'icy.webp',
+				'icy_pix.webp',
+				'1454179433 (Upscaled).webp',
+				'1524060738 (Upscaled).webp',
+				'neon ripples.webp',
+				'313778383 (Upscaled).webp',
+				'transparent low poly Crystal rainbow Jungle Leaves (1679993035).webp',
+				'transparent low poly Crystal rainbow Jungle Leaves (230812464).webp',
+				'aerial jungle pyramids (743559876).webp',
+				'aerial sythwave pyramids (1087111350).webp',
+				'crystal stairs depth blur (3363940484).webp',
+				'crystal stairs depth blur (2702036273).webp',
+				'scientific illustrations, fantasy fauna, ink.. (3136820274).webp',
+				'scientific illustrations, fantasy fauna, ink.. (2948481068).webp'
+			];
+			structimages.forEach((image) => {
+				document.write(`<div class="thumbnail" onclick="changeBackground('${image}')" style="background-image: url('${image}')"></div>`);
+			});
+		</script>
+		</div>
 			<button class="accordion">Abstract</button>
 		<div class="panel">
-			<div class="thumbnail" onclick="changeBackground('90s, arcade carpet, pattern, neon, sharp, is.. (1738496323).webp')" style="background-image: url('90s, arcade carpet, pattern, neon, sharp, is.. (1738496323).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('90s, arcade carpet, pattern, neon, sharp, is.. (2510764918).webp')" style="background-image: url('90s, arcade carpet, pattern, neon, sharp, is.. (2510764918).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('90s, arcade carpet, pattern, neon, sharp, is.. (4177455256).webp')" style="background-image: url('90s, arcade carpet, pattern, neon, sharp, is.. (4177455256).webp')"></div>
+		<script>
+			const absimages = [
+				'90s, arcade carpet, pattern, neon, sharp, is.. (1738496323).webp',
+				'90s, arcade carpet, pattern, neon, sharp, is.. (2510764918).webp',
+				'90s, arcade carpet, pattern, neon, sharp, is.. (4177455256).webp',
+			];
+			absimages.forEach((image) => {
+				document.write(`<div class="thumbnail" onclick="changeBackground('${image}')" style="background-image: url('${image}')"></div>`);
+			});
+		</script>
 		</div>
 			<button class="accordion">Misc</button>
 		<div class="panel">
-			<div class="thumbnail" onclick="changeBackground('vibrant pidgeon, snthwve style, nvinkpunk (1133939517).webp')" style="background-image: url('vibrant pidgeon, snthwve style, nvinkpunk (1133939517).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('low poly cute transparent forest animals glow (2525679370).webp')" style="background-image: url('low poly cute transparent forest animals glow (2525679370).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('low poly cute transparent forest animals glow (3462600273).webp')" style="background-image: url('low poly cute transparent forest animals glow (3462600273).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('durks.webp')" style="background-image: url('durks.webp')"></div>	
-			<div class="thumbnail" onclick="changeBackground('1229267341 (Upscaled).webp')" style="background-image: url('1229267341 (Upscaled).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('icecream.webp')" style="background-image: url('icecream.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('axolotl.webp')" style="background-image: url('axolotl.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('tilt shift, high detail, faeries flying through mist (563753432.webp')" style="background-image: url('tilt shift, high detail, faeries flying through mist (563753432.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('pencil crayon fantasy road map from forest t.. (3169447037).webp')" style="background-image: url('pencil crayon fantasy road map from forest t.. (3169447037).webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('tilt shift, high detail, faeries flying through mist (153357965.webp')" style="background-image: url('tilt shift, high detail, faeries flying through mist (153357965.webp')"></div>
+		<script>
+			const misimages = [
+				'vibrant pidgeon, snthwve style, nvinkpunk (1133939517).webp',
+				'low poly cute transparent forest animals glow (2525679370).webp',
+				'low poly cute transparent forest animals glow (3462600273).webp',
+				'durks.webp',
+				'1229267341 (Upscaled).webp',
+				'icecream.webp',
+				'axolotl.webp',
+				'tilt shift, high detail, faeries flying through mist (563753432.webp',
+				'pencil crayon fantasy road map from forest t.. (3169447037).webp',
+				'tilt shift, high detail, faeries flying through mist (153357965.webp'
+			];
+			misimages.forEach((image) => {
+				document.write(`<div class="thumbnail" onclick="changeBackground('${image}')" style="background-image: url('${image}')"></div>`);
+			});
+		</script>
 		</div>
 		<button class="accordion">Ununiques</button>
 		<div class="panel">
-			<div class="thumbnail" onclick="changeBackground('Plant-Neon-Dream-Pattern-roselocket-00.webp')" style="background-image: url('Plant-Neon-Dream-Pattern-roselocket-00.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('Plant-Neon-Dream-Pattern-roselocket-05.webp')" style="background-image: url('Plant-Neon-Dream-Pattern-roselocket-05.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('Plant-Violet-Glitch-Pattern-roselocket-06.webp')" style="background-image: url('Plant-Violet-Glitch-Pattern-roselocket-06.webp')"></div>
-			<div class="thumbnail" onclick="changeBackground('Plant-Pink-Glitch-Pattern-roselocket-03.webp')" style="background-image: url('Plant-Pink-Glitch-Pattern-roselocket-03.webp')"></div>
-			
-		</div>
+		<script>
+			const unimages = [
+				'Plant-Neon-Dream-Pattern-roselocket-00.webp',
+				'Plant-Neon-Dream-Pattern-roselocket-05.webp',
+				'Plant-Violet-Glitch-Pattern-roselocket-06.webp',
+				'Plant-Pink-Glitch-Pattern-roselocket-03.webp'
+			];
+			unimages.forEach((image) => {
+				document.write(`<div class="thumbnail" onclick="changeBackground('${image}')" style="background-image: url('${image}')"></div>`);
+			});
+		</script>
 	</div>
 	<div style="display: inline; float: right; background-color: white;">
 		<button id="minus">-</button>
