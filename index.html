@@ -84,6 +84,7 @@
 				'eldritch columns.webp',
 				'Crystal Jungle Leaves (1155667477).webp',
 				'transparent low poly Crystal rainbow Jungle Leaves (2854713576).webp',
+				'pencil crayon fantasy road map from forest t.. (3169447037).webp',
 				'scientific illustrations, fantasy fauna, ink.. (4108518997).webp',
 				'dankey kang bitches (2542078183).webp'
 			];
@@ -149,7 +150,6 @@
 				'icecream.webp',
 				'axolotl.webp',
 				'tilt shift, high detail, faeries flying through mist (563753432.webp',
-				'pencil crayon fantasy road map from forest t.. (3169447037).webp',
 				'tilt shift, high detail, faeries flying through mist (153357965.webp',
 				'dankey kang bitches (3943516880).webp',
 				'dankey kang bitches (2139326257).webp'
@@ -174,10 +174,11 @@
 		</script>
 	</div>
 	<div style="display: inline; float: right; background-color: white;">
-		<button id="minus">-</button>
-		<span id="scale">30%</span>
-		<button id="plus">+</button>
+	  <button id="minus">-</button>
+	  <span id="scale">30%</span>
+	  <button id="plus">+</button>
 	</div>
+
 	<script>
 		// BG changer
 		function changeBackground(imageUrl) {
@@ -213,22 +214,34 @@
 
 		// image scale buttons
 		const plusBtn = document.querySelector("#plus");
-		const minusBtn = document.querySelector("#minus");
-		const scaleDisplay = document.querySelector("#scale");
+	  const minusBtn = document.querySelector("#minus");
+	  const scaleDisplay = document.querySelector("#scale");
 
-		let scaleValue = 30;
+	  let scaleValue = 30;
 
-		plusBtn.addEventListener("click", () => {
+	  plusBtn.addEventListener("click", () => {
+		if (scaleValue <= 14) {
+		  scaleValue += 1;
+		} else if (scaleValue >= 15 && scaleValue <= 49) {
 		  scaleValue += 5;
-		  document.body.style.backgroundSize = `${scaleValue}%`;
-		  scaleDisplay.textContent = `${scaleValue}%`;
-		});
+		} else if (scaleValue >= 50) {
+		  scaleValue += 25;
+		}
+		document.body.style.backgroundSize = `${scaleValue}%`;
+		scaleDisplay.textContent = `${scaleValue}%`;
+	  });
 
-		minusBtn.addEventListener("click", () => {
+	  minusBtn.addEventListener("click", () => {
+		if (scaleValue <= 15) {
+		  scaleValue -= 1;
+		} else if (scaleValue >= 16 && scaleValue <= 50) {
 		  scaleValue -= 5;
-		  document.body.style.backgroundSize = `${scaleValue}%`;
-		  scaleDisplay.textContent = `${scaleValue}%`;
-		});
+		} else if (scaleValue >= 51) {
+		  scaleValue -= 25;
+		}
+		document.body.style.backgroundSize = `${scaleValue}%`;
+		scaleDisplay.textContent = `${scaleValue}%`;
+	  });
 	</script>
   </body>
 </html>
